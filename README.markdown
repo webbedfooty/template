@@ -8,6 +8,8 @@ application up and running.
 
 * Ruby version 2.3.1
 
+* Environment Variables:
+
 Things you may want to cover:
 
 * System dependencies
