@@ -2,6 +2,11 @@
 
 This is a template for use when deploying any future rails projects.
 
+https://cryptic-shelf-24473.herokuapp.com/
+
+[![Code Climate](https://codeclimate.com/github/webbedfooty/template/badges/gpa.svg)](https://codeclimate.com/github/webbedfooty/template)
+
+[![Test Coverage](https://codeclimate.com/github/webbedfooty/template/badges/coverage.svg)](https://codeclimate.com/github/webbedfooty/template/coverage)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
