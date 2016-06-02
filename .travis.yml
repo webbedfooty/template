@@ -7,3 +7,7 @@
   - psql -c 'create database template_test;' -U postgres
   services:
   - postgresql
+
+addons:
+  code_climate:
+    repo_token: af07d16865af867bfefc8ee7f8c0492fc94915f52d1c288cd3bc1df8405145d7
