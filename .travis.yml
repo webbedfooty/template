@@ -1,13 +1,18 @@
- language: ruby
-  rvm:
-  - 2.3.1
-  install:
-  - bundle install
-  before_script:
-  - psql -c 'create database template_test;' -U postgres
-  services:
-  - postgresql
-
+language: ruby
+rvm:
+- 2.3.1
+install:
+- bundle install
+before_script:
+- psql -c 'create database template_test;' -U postgres
+services:
+- postgresql
 addons:
   code_climate:
     repo_token: af07d16865af867bfefc8ee7f8c0492fc94915f52d1c288cd3bc1df8405145d7
+deploy:
+  provider: heroku
+  app: cryptic-shelf-24473
+  run: "rake db:migrate"
+  api_key:
+    secure: B3a8JUZ0DiXhxo+k46o7dbXC9EJZLyhWbCIMYemoyp2WVzg4U/9NDZgsJ+dThqhv5kwHvCU3yXBpQtS8SpRCQzb/cJkSylghQ51ko6ml3zRP0EY6MgIoV+9CthKE1MXdG5bHt+4NTjcVi10+v/I+dGSph9vS7q5myi6Pa0ZGMU/WPwRruadmalrOolNdQm4pTwZO8sIsmAsdC324k+n6fFagP23NeD2a21Lvo51aeVJv7oTRZqH9fA1YpUgC9jBk83h7LoGuqCbb84egnoBl792mKJxEsyps9ZRwGP01bdItgmlimi/eMEwhgjK5Knlyth7lh6ELLB/ty0pTV91Ec7ZcoQtqB96AtdvDo7yAJ7q3s+aXSs690tJ13vr8D2tUgESeYgbH0GZ4G2WtEMoWlKzv6W6VaC9eN/OtHsBTgAX11Uk2fY9/ug1CLqBP4CCZBmcI51y2kn93mDKC3CSuGtYXTg6D0eL+sYB9ikzlAXRGriduQzXY9RbhyVFW2F0QdiU51DsI93uUlokbaMSydm77Zn31KL0lQ9QjjChln77CsoMsRR2A1HFEV+6fQ7j22khxtw71cxkEytIPNB0cK5POjdvDf/pTWvU19mNANiJghW5OUgPjyTVHbw/jIDMuH41fHeYfi5zoU2+o62TD68b5sm0YViE2i2I48AncmjU=
